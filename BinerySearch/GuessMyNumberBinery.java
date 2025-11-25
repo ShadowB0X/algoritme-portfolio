@@ -1,6 +1,5 @@
 package BinerySearch;
 
-import java.util.Random;
 import java.util.Scanner;
 
 
@@ -26,16 +25,16 @@ public class GuessMyNumberBinery {
         int tries = 0;
 
         while (min <= max) {
-            int guess = (min + max) / 2;   // midten af intervallet
+            int guess = (min + max) / 2;   
             tries++;
             System.out.println("Gæt #" + tries + ": " + guess);
 
             if (guess < secret) {
                 System.out.println("For lavt.");
-                min = guess + 1;           // søg i øverste halvdel
+                min = guess + 1;          
             } else if (guess > secret) {
                 System.out.println("For højt.");
-                max = guess - 1;           // søg i nederste halvdel
+                max = guess - 1;          
             } else {
                 System.out.println("\nKorrekt! Tallet var " + secret + ".");
                 System.out.println("Antal forsøg: " + tries);
